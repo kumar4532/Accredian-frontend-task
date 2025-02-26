@@ -7,12 +7,5 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss()
-  ],
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://accredian-backend-task-wy4j.onrender.com"
-      }
-    }
-  }
+  ]
 })

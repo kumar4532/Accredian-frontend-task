@@ -12,6 +12,9 @@ function App() {
     referrerName: "",
   });
 
+  console.log(formData);
+  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -28,6 +31,8 @@ function App() {
       })
 
       const data = await res.json()
+
+      console.log(data);
 
       if (!res.ok) {
         throw new Error(data.error || "Something went wrong");

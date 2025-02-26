@@ -12,9 +12,6 @@ function App() {
     referrerName: "",
   });
 
-  console.log(formData);
-  
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -22,7 +19,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/refer/", {
+      const res = await fetch("https://accredian-backend-task-wy4j.onrender.com/api/refer/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
